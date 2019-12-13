@@ -77,7 +77,7 @@ public class Encrypt {
 			byte[] bytes = baos.toByteArray();
 
 			String name = entry.getName();
-			if (name.endsWith(".class") && name.startsWith("com/chainup/exchange/domain")) {
+			if (name.endsWith(".class") && name.startsWith("com/***/foo/abr")) {
 				System.out.println("encrypt " + name);
 				try {
 					bytes = coder.encrypt(bytes);
