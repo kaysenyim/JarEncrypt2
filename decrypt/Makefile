@@ -1,14 +1,14 @@
 ifeq ($(shell uname), Linux)
   CC         = g++ -fPIC 
   LIBLINK    = -shared 
-  INCLUDEDIR = -I $(shell JAVA_HOME)/include -I $(shell JAVA_HOME)/include/linux
+  INCLUDEDIR = -I $(shell echo ${JAVA_HOME})/include -I $(shell echo ${JAVA_HOME})/include/linux
   TARGET     = liblinux.so
 endif
 
 ifeq ($(shell uname), Darwin)
   CC		     = g++ 
   LIBLINK    = -dynamiclib
-  INCLUDEDIR = -I $(shell JAVA_HOME)/include -I $(shell JAVA_HOME)/include/darwin
+  INCLUDEDIR = -I $(shell echo ${JAVA_HOME})/include -I $(shell echo ${JAVA_HOME})/include/darwin
   TARGET     = libdarwin.dylib
 endif
 
