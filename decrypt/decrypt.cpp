@@ -23,11 +23,11 @@ MyClassFileLoadHook(
 
     unsigned char *my_data = *new_class_data;
 
-    if (name && strncmp(name, "com/chainup/exchange/domain", 27) == 0)
+    if (name && strncmp(name, "com/***/foo/abr", 12) == 0)
     {
         for (int i = 0; i < class_data_len; ++i)
         {
-            my_data[i] = class_data[i] ^ 0x01e02c562;
+            my_data[i] = class_data[i] ^ 0xcf;
         }
     }
     else
