@@ -8,7 +8,7 @@ endif
 ifeq ($(shell uname), Darwin)
   CC		     = g++ 
   LIBLINK    = -dynamiclib
-  INCLUDEDIR = -I $(shell echo ${JAVA_HOME})/include -I $(shell echo ${JAVA_HOME})/include/darwin
+  INCLUDEDIR = -I $(shell echo ${JAVA_HOME})/include -I $(shell echo ${JAVA_HOME})/include/darwin -I /usr/local/opt/openssl/include
   TARGET     = libdarwin.dylib
 endif
 
